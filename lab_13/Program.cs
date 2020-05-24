@@ -140,7 +140,7 @@ namespace lab_13
             _stack = new CustomStack<Production>(size);
         }
 
-        public void Add(Production item)
+        public new void Add(Production item)
         {
             _stack.Add(item);
             OnCollectionCountChanged(this, new CollectionHandlerEventArgs(Name, "ДОБАВЛЕН", item));
@@ -160,7 +160,7 @@ namespace lab_13
             return false;
         }
 
-        public Production this[int index]
+        public new Production this[int index]
         {
             get => _stack[index];
             set

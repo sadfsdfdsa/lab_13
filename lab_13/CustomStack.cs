@@ -31,7 +31,7 @@ namespace lab_13
         }
     }
 
-    public class CustomStack : IEnumerable, IEnumerator
+    public class CustomStack<T> : IEnumerable, IEnumerator
     {
         public int Length;
         public Point Point;

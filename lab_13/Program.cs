@@ -119,9 +119,9 @@ namespace lab_13
         }
     }
 
-    public class NewCustomStack
+    public class NewCustomStack: CustomStack<Production>
     {
-        public CustomStack _stack = new CustomStack();
+        public CustomStack<Production> _stack = new CustomStack<Production>();
         string Name { get; set; }
 
         public override string ToString()
@@ -137,7 +137,7 @@ namespace lab_13
         public NewCustomStack(string colName, int size)
         {
             Name = colName;
-            _stack = new CustomStack(size);
+            _stack = new CustomStack<Production>(size);
         }
 
         public void Add(Production item)
